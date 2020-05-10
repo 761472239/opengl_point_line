@@ -10,6 +10,9 @@ import java.nio.IntBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+/**
+ * @author 76147
+ */
 public class MyRenderer implements GLSurfaceView.Renderer {
 
     float[] point = new float[]{
@@ -28,6 +31,7 @@ public class MyRenderer implements GLSurfaceView.Renderer {
             0.6f,0f,0f
     };
 */
+
     private FloatBuffer pointData;
     private FloatBuffer lineData;
 
@@ -51,6 +55,7 @@ public class MyRenderer implements GLSurfaceView.Renderer {
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
         // 启用顶点坐标数据1
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+
 
         gl.glVertexPointer(3, GL10.GL_FLOAT, 0, pointData);
         gl.glColor4f(0, 1, 0, 0);
